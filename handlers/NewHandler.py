@@ -81,4 +81,3 @@ class Handler(webapp.RequestHandler):
         self.response.out.write(simplejson.dumps({'posts':posts_json}))
     else:
       self.response.out.write(template.render('templates/main.html', locals()))
-

@@ -14,13 +14,7 @@
         <label for="email">Email(no se despliega en ningun lado, solo se usa por si pierdes tu password):</label>
         <input type="text" name="email" id="email" size="30" class="email" value="{% if profiledUser.email %}{{profiledUser.email}}{% endif %}" />
         <br />
-        <label for="hnuser">Usuario HN(case sensitive):</label>
-        <input type="text" name="hnuser" id ="hnuser" value="{{profiledUser.hnuser}}" />
-        <br />
-        <label for="github">Usuario Github:</label>
-        <input type="text" name="github" id ="github" value="{{profiledUser.github}}" />
-        <br />
-        <label for="location">Localización:</label>
+        <label for="location">Ciudad:</label>
         <input type="text" name="location" id ="localizacion" value="{{profiledUser.location}}" />
         <br />
         <label for="twitter">Twitter:</label>

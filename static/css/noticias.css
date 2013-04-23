@@ -90,10 +90,9 @@ a:hover {
       font-size: 12px;
       padding: 0 5px;
       color: #1e1e1e; }
+    #header #menu #user_toolbar .karma {
+      color: white; }
 
-.karma{
-    color: white;
-}
 
 #content {
   color: #666666; 
@@ -118,8 +117,6 @@ a:hover {
   .comment .votes .voted {
     font-weight: 900;
     font-size: 1.1em; }
-    .comment .votes .voted img {
-      display: none; }
 .comment .info {
   font-size: 0.8em;
   padding: 0px 10px 5px 30px; }
@@ -177,15 +174,20 @@ a:hover {
     border-radius: 30px;
     color: white;
 }
+  .dot{
+    color: #ffb500;
+  }
   .noticia a.post-upvote {
     display: block;
     float: left;
-    padding: 15px; }
+    padding: 15px; 
+    min-width: 20px;
+    }
   .noticia .voted {
     font-weight: 900;
     font-size: 1.1em; }
     .noticia .voted img {
-      display: none; }
+      opacity: 0.5; }
   .noticia .post-title {
     line-height: 1.8em;
     font-size: 1.1em; }
@@ -324,10 +326,14 @@ input.fielderror, textarea.fielderror {
     font-weight: bold; }
   .notifications-menu #all {
     background: transparent url(/static/images/sobre.png) no-repeat scroll 0 0;
-    padding-left: 20px; }
+    padding-left: 20px; 
+    background-position: 1px 6px;
+}
   .notifications-menu #unread {
     background: transparent url(/static/images/sobre_active.png) no-repeat scroll 0 0;
-    padding-left: 20px; }
+    padding-left: 20px; 
+    background-position: 1px 6px;
+}
 
 .notifications .notification {
   list-style: none;
@@ -380,4 +386,8 @@ hr {
 .twitter{
     display: inline;
     position: relative;
+}
+
+.karma{
+  color: white;
 }
