@@ -1,48 +1,84 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: 'Titillium Web', sans-serif; 
+}
 
 body {
   background-color: white;
   align-text: center;
-  font-size: 14px;
-  line-height: 1.5em; }
+  font-size: 16px;
+  line-height: 1.3em; }
 
 img {
   border: 0; }
 
 #wrapper {
   width: 80%;
-  margin: 30px auto; }
+  margin: 0px auto; 
+}
 
 a {
-  color: #8ac649;
-  text-decoration: none; }
+  color: #000;
+  text-decoration: none; 
+}
+
+.cf:before, .cf:after {
+      content: " ";
+      display: table;
+}
+
+.cf:after {
+      clear: both;
+}
+
+.cf{
+      *zoom: 1;
+}
+
 
 a:hover {
   text-decoration: underline; }
 
+.full_wrapper{
+    width: 100%;
+    Background-color: black;
+}
+
+#page_title{
+    margin-right: 60px;
+}
+#page_title span{
+    color: white;
+}
+
+
 #header {
-  background-color: #8ac649;
-  height: 25px;
+  background-color: #000;
+  height: 30px;
   line-height: 25px;
-  position: relative;
-  margin-bottom: 5px;
-  padding: 0.3em; }
+  padding: 1.5em; 
+  color: white;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
   #header #logo span.logotype {
     display: blog;
     width: 23px;
     height: 23px;
     float: left; }
   #header #menu a {
-    color: #111111;
+    color: #ffb500;
     font-size: 13px;
     text-transform: lowercase;
     line-height: 25px; }
   #header #menu #main_nav {
     float: left;
-    margin-left: 24px; }
+    margin-top: 3px;
+    margin-left: 20px; 
+    color: white;
+}
     #header #menu #main_nav span.sitename {
       padding-right: 5px;
       text-transform: none;
@@ -55,13 +91,20 @@ a:hover {
       padding: 0 5px;
       color: #1e1e1e; }
 
+.karma{
+    color: white;
+}
+
 #content {
-  color: #666666; }
+  color: #666666; 
+  margin-top: 30px;
+}
 
 #content-2 {
   color: #666666; }
 
 #indextanksearch {
+  margin-left: 20px;
   padding: 0 0 0 0px;
   display: inline; }
 
@@ -118,24 +161,26 @@ a:hover {
   margin-left: 51px; }
 
 .noticia {
-  border-bottom: 1px solid #F2F2F2;
-  padding: 0.2em 0 0.5em;
+  padding: 1.1em 1.1em;
   margin: 1px 0 0; }
   .noticia:nth-child(even) {
-    background: #F5F5F5; }
+    background: #eaeaea; 
+}
   .noticia .order-number {
     float: left;
     width: 20px;
     text-align: right;
     font-weight: normal;
-    font-size: 0.75em;
-    padding-top: 5px; }
+    font-size: 1.1em;
+    padding: 15px; 
+    background-color: #ffb500;
+    border-radius: 30px;
+    color: white;
+}
   .noticia a.post-upvote {
     display: block;
     float: left;
-    padding-top: 4px;
-    padding-left: 8px;
-    width: 20px; }
+    padding: 15px; }
   .noticia .voted {
     font-weight: 900;
     font-size: 1.1em; }
@@ -157,7 +202,9 @@ a:hover {
     line-height: 13px;
     margin-left: 51px; }
     .noticia .post-info a {
-      color: #8ac649; }
+      color: #000; 
+      font-weight: 800;
+}
   .noticia .post-votes {
     min-width: 36px;
     float: left; }
@@ -195,21 +242,24 @@ a:hover {
       padding: 0.5em; }
 
 #pages {
-  padding: 10px 51px;
-  font-size: 13px;
-  font-weight: bold; }
+  padding: 25px;
+  font-size: 18px;
+  font-weight: bold; 
+}
 
 #footer {
-  font-size: 12px;
-  line-height: 17px;
+  font-size: 14px;
+  line-height: 25px;
   text-align: center;
-  background-color: #8ac649;
-  padding: 5px 0; }
+  background-color: #000;
+  padding: 20px 0; 
+  color: white;
+}
   #footer .disclamer {
     line-height: 15px;
     font-size: 0.8em; }
   #footer a {
-    color: #111111; }
+    color: #ffb500; }
 
 #guidelines {
   padding: 0 20px;
@@ -301,7 +351,7 @@ hr {
     width: 12em; }
 
 #login-box {
-  border-right: 1px solid #8ac649; }
+  border-right: 1px solid #EAEAEA; }
 
 #login-box, #register-box {
   float: left;
@@ -322,3 +372,12 @@ hr {
   color: #111111;
   margin: 2em 0;
   padding: 0 20px; }
+
+.social{
+    display: inline-block;
+    margin-top: 7px;
+}
+.twitter{
+    display: inline;
+    position: relative;
+}

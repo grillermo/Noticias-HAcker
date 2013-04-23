@@ -1,4 +1,4 @@
-application: noticiashacker 
+application: bandtasticnews
 version: 5
 runtime: python
 api_version: 1

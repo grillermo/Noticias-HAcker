@@ -39,7 +39,7 @@ from models import User, Post, Comment, Vote, Notification, Ticket
 
 
 #register the desdetiempo filter to print time since in spanish
-template.register_template_library('CustomFilters')
+template.register_template_library('filters.CustomFilters')
 
 class Handler(webapp.RequestHandler):
   def get(self):
@@ -70,7 +70,7 @@ class Handler(webapp.RequestHandler):
         code = ticket.code
         host = self.request.url.replace(self.request.path,'',1)
        
-        mail.send_mail(sender="NoticiasHacker <dfectuoso@noticiashacker.com>",
+        mail.send_mail(sender="Bandtastic News <dfectuoso@Bandtastic News.com>",
           to=user.nickname + "<"+user.email+">",
           subject="Liga para restablecer password",
           html=template.render('templates/mail/forgotten-password-email.html', locals()),

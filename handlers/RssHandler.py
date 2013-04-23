@@ -39,7 +39,7 @@ from models import User, Post, Comment, Vote, Notification, Ticket
 
 
 #register the desdetiempo filter to print time since in spanish
-template.register_template_library('CustomFilters')
+template.register_template_library('filters.CustomFilters')
 
 class Handler(webapp.RequestHandler):
   def get(self):
@@ -67,14 +67,12 @@ class Handler(webapp.RequestHandler):
       ))
 
     rss = PyRSS2Gen.RSS2(
-            title = "Noticias Hacker",
-            link = "http://noticiashacker.com/",
-            description = "Noticias Hacker",
+            title = "Bandtastic News",
+            link = "http://news.bandtastic.me/",
+            description = "Bandtastic News",
             lastBuildDate = datetime.now(),
             items = items
           )
     print 'Content-Type: text/xml'
     self.response.out.write(rss.to_xml('utf-8'))
-
-
 

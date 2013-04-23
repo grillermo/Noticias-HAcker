@@ -39,7 +39,7 @@ from models import User, Post, Comment, Vote, Notification, Ticket
 
 
 #register the desdetiempo filter to print time since in spanish
-template.register_template_library('CustomFilters')
+template.register_template_library('filters.CustomFilters')
 
 
 

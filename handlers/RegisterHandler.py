@@ -1,5 +1,6 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
+
 #Copyright (c) 2011 - Santiago Zavala
 #Permission is hereby granted, free of charge, to any person obtaining a copy
 #of this software and associated documentation files (the "Software"), to deal
@@ -39,13 +40,13 @@ from models import User, Post, Comment, Vote, Notification, Ticket
 
 
 #register the desdetiempo filter to print time since in spanish
-template.register_template_library('CustomFilters')
+template.register_template_library('filters.CustomFilters')
 
 class Handler(webapp.RequestHandler):
   def post(self):
     session = get_current_session()
-    nickname = helper.sanitizeHtml(self.request.get('nickname'))
-    password = helper.sanitizeHtml(self.request.get('password'))
+    nickname = unicode(helper.sanitizeHtml(self.request.get('nickname')))
+    password = unicode(helper.sanitizeHtml(self.request.get('password')))
     
     if len(nickname) > 1 and len(password) > 1:
       password = User.slow_hash(password);
@@ -67,6 +68,3 @@ class Handler(webapp.RequestHandler):
     else:
       session['register_error'] = "Porfavor escribe un username y un password"
       self.redirect('/login')
-
-
-
