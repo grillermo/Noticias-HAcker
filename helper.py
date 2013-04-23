@@ -1,3 +1,6 @@
+#!/usr/local/bin/python
+# -*- coding: utf-8 -*-
+
 #Copyright (c) 2011 - Santiago Zavala
 #Permission is hereby granted, free of charge, to any person obtaining a copy
 #of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +30,7 @@ from django.template.defaultfilters import slugify
 from google.appengine.api import taskqueue
 
 def sanitizeHtml(value):
-  return escape(value)
+  return unicode(escape(value))
 
 def is_json(value):
   if value.find('.json') >= 0:
@@ -98,7 +101,7 @@ def base_url(self):
   return uri.scheme +'://'+ uri.netloc
 
 def sluglify(text):
-  return slugify(text)
+  return unicode(slugify(text))
 
 def indextank_document(base_url, post):
   if not keys.indextank_private_key:
@@ -130,4 +133,3 @@ def killmetrics(category,subcategory,verb,session,user,r):
   sessionUID = get_session_id(session)
   
   taskqueue.add(url='/tasks/send_to_killmetrics', params={'category':category,'subcategory':subcategory,'verb':verb,'userUID': user, 'sessionUID':sessionUID,'user-agent':user_agent})
-
