@@ -12,7 +12,7 @@
   <form method="POST" class="validable">
     <fieldset>
       <label>Título</label><input class="textfields requerido" name="title" value="{{ get_title }}"/>
-      <input type="hidden" name="comment_key" value="">
+      <input type="hidden" name="comment_key" value="{{ comment_key }}">
       <label>URL</label><input class="textfields requerido url" name="url" value="{{ get_url }}"/><br/>
       <input type="submit" value="Agregar"/>
     </fieldset>
