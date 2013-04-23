@@ -12,6 +12,10 @@ function upVote(self, post_key){
   $.get('/upvote/' + post_key, function(data) {
     if (data == 'Ok'){
       self.className += " voted";
+      var current_counter = $(self).closest('.noticia').find('.sum_votes');
+      var current_count = parseInt(current_counter.html());
+      var new_count = current_count + 1;
+      current_counter.html(new_count);
     } else if (data == 'Bad'){
       window.location = "/login"
     }

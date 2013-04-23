@@ -1,12 +1,12 @@
   <div class="noticia">
     <div class="post-votes">
       {% if post.number %}
-        <span class="order-number">{{post.number}}.</span>
+        <span class="order-number">{{post.number}}<span class='dot'>.</span></span>
       {% endif %}
       {% if post.prefetched_already_voted %}
-        <a class="post-upvote voted"><img src="/static/images/grayarrow.gif"/></a><br/>
+        <a class="post-upvote voted"><img src="/static/images/votado.png"/></a><br/>
       {% else %}
-        <a class="post-upvote" href="/upvote/{{post.key}}" onclick="upVote(this, '{{post.key}}'); return false;"><img src="/static/images/grayarrow.gif" alt="^"/></a><br/>
+        <a class="post-upvote" href="/upvote/{{post.key}}" onclick="upVote(this, '{{post.key}}'); return false;"><img src="/static/images/votar.png" alt="^"/></a><br/>
       {% endif %}
     </div>
     <div class="post-title">
@@ -16,7 +16,7 @@
       {% endif %}
     </div>
     <div class="post-info">
-      {{post.prefetched_sum_votes}} puntos, entregado por <a href="/perfil/{{post.user.nickname}}">{{post.user.nickname}}</a> hace {{post.created|timesince|hacetiempo}}
+      <span class='sum_votes'>{{post.prefetched_sum_votes}}</span> puntos, compartido por <a href="/perfil/{{post.user.nickname}}">{{post.user.nickname}}</a> hace {{post.created|timesince|hacetiempo}}
       {% if post.edited %}*{% endif %}
       | 
       {% if not post.nice_url  %}
