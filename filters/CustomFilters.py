@@ -21,11 +21,11 @@ from google.appengine.ext.webapp import template
 
 register = webapp.template.create_template_register()
 def hacetiempo(value):
-  value = value.replace("year", "año")
-  value = value.replace("week", "semana")
-  value = value.replace("day", "dia")
-  value = value.replace("hour", "hora")
-  value = value.replace("minute", "minuto")
+  value = value.replace("year", u"año")
+  value = value.replace("week", u"semana")
+  value = value.replace("day", u"dia")
+  value = value.replace("hour", u"hora")
+  value = value.replace("minute", u"minuto")
   return value
 
 register.filter(hacetiempo)
