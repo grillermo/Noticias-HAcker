@@ -45,7 +45,7 @@ from handlers import ( MainHandler, ThreadsHandler, GuidelinesHandler, FAQHandle
                        LeaderHandler, LoginHandler, LogoutHandler, RegisterHandler, 
                        NewPasswordHandler, RecoveryHandler, RssHandler, APIGitHubHandler,
                        APITwitterHandler, APIHackerNewsHandler, 
-                       SubmitNewStoryBookmarkletHandler )
+                       SubmitNewStoryBookmarkletHandler, DeletePostHandler )
 
 
 import os
@@ -69,6 +69,7 @@ def main():
       ('/perfil/(.+)', ProfileHandler.Handler),
       ('/noticia/(.+)', PostHandler.Handler),
       ('/editar-noticia/(.+)', EditPostHandler.Handler),
+      ('/borrar-noticia/(.+)', DeletePostHandler.Handler),
       ('/responder/(.+)', CommentReplyHandler.Handler),
       ('/editar-comentario/(.+)', EditCommentHandler.Handler),
       ('/inbox', NotificationsInboxHandler.Handler),

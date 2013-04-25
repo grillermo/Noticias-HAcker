@@ -24,7 +24,10 @@
       {% else %}
         <a href="/noticia/{{post.nice_url}}">{{post.cached_comment_count}} comentarios</a>	
       {% endif %}
-      {% if post.can_edit %}| <a href="/editar-noticia/{{post.key}}">editar</a> {% endif %}
+      {% if post.can_edit %}
+        | <a href="/editar-noticia/{{post.key}}">editar</a> 
+        | <a href="/borrar-noticia/{{post.key}}">borrar</a> 
+      {% endif %}
     </div>
   </div>
 

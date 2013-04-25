@@ -184,6 +184,10 @@ class Post(db.Model):
       memcache.add("Post_count",count,3600)
       return count
 
+  def delete(self,*args,**kwargs):
+    self.remove_from_memcache()
+    super(Post,self).delete(*args,**kwargs)
+
 class Comment(db.Model):
   message = db.TextProperty()
   user    = db.ReferenceProperty(User, collection_name='comments')
