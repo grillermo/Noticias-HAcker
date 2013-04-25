@@ -44,7 +44,8 @@ from handlers import ( MainHandler, ThreadsHandler, GuidelinesHandler, FAQHandle
                        NotificationsInboxAllHandler, NotificationsMarkAsReadHandler,
                        LeaderHandler, LoginHandler, LogoutHandler, RegisterHandler, 
                        NewPasswordHandler, RecoveryHandler, RssHandler, APIGitHubHandler,
-                       APITwitterHandler, APIHackerNewsHandler )
+                       APITwitterHandler, APIHackerNewsHandler, 
+                       SubmitNewStoryBookmarkletHandler )
 
 
 import os
@@ -62,6 +63,7 @@ def main():
       ('/nuevo.json', NewHandler.Handler),
       ('/noticias-usuario/(.+)', UserPostsHandler.Handler),
       ('/agregar', SubmitNewStoryHandler.Handler),
+      ('/agregar.bookmarklet', SubmitNewStoryBookmarkletHandler.Handler),
       ('/upvote/(.+)', UpVoteHandler.Handler),
       ('/upvote_comment/(.+)', UpVoteCommentHandler.Handler),
       ('/perfil/(.+)', ProfileHandler.Handler),
