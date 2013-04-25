@@ -32,7 +32,7 @@ from models import User, Post, Comment, Vote
 def prefetch_refprops(entities, *props):
   fields = [(entity, prop) for entity in entities for prop in props]
   ref_keys = [prop.get_value_for_datastore(x) for x, prop in fields]
-  ref_entities = dict((x.key(), x) for x in db.get(set(ref_keys)))
+  ref_entities = dict((x.key(), x) for x in db.get(set(ref_keys)) if x)
   for (entity, prop), ref_key in zip(fields, ref_keys):
     if ref_entities[ref_key]:
       prop.__set__(entity, ref_entities[ref_key])
