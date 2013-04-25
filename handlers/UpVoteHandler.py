@@ -63,6 +63,3 @@ class Handler(webapp.RequestHandler):
         self.response.out.write('Bad')
     else:
       self.response.out.write('Bad')
-
-
-

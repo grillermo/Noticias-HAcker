@@ -96,6 +96,14 @@ a:hover {
     font-size: 13px;
     text-transform: lowercase;
     line-height: 25px; }
+    #header #menu #add_new {
+        padding: 10px 15px;
+        background-color: #6ca12e;
+        color: white;
+        font-weight: bold;
+        border-radius: 2px;
+        margin-left: 20px;
+    }
   #header #menu #main_nav {
     float: left;
     margin-top: 3px;
