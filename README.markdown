@@ -13,46 +13,48 @@ Instalacion
 
 * Instalar el Google App Engine SDK
 * Agregar este repositorio como un proyecto existente
-* Crear un archivo llamado "keys.py". Este archivo contiene un hash para saltear los password y otros para la session. Este archivo debe de tener las siguientes dos lineas:
+* Crear un archivo llamado "keys.py". Este archivo contiene un hash para saltear los password y otros para la session. 
+* Este archivo debe de tener las siguientes lineas:
+ 
+
+     
+   
+        cookie_key = 'UNASTRINGALEATORIAMUYLARGAUNASTRINGALEATORIAMUYLARGAUNASTRINGALEATORIAMUYLARGA'
+        
+        salt_key = 'UNASTRINGALEATORIAMUYLARGA'
+        
+        comment_key = 'UNASTRINGNOTANLARGAPEROSIALEATORIA'
  
 
 
+        # Si quisieras usar el bot de twitter tambien necesitarias agregar las siguientes llaves de la misma manera:
 
-    cookie_key = 'UNASTRINGALEATORIAMUYLARGAUNASTRINGALEATORIAMUYLARGAUNASTRINGALEATORIAMUYLARGA'
-
-    salt_key = 'UNASTRINGALEATORIAMUYLARGA'
-
-    comment_key = 'UNASTRINGNOTANLARGAPEROSIALEATORIA'
-
-
-
-
-Si quisieras usar el bot de twitter tambien necesitarias agregar las siguientes llaves de la misma manera:
-
-
-    consumer_key = ""
-
-    consumer_secret = ""
-
-    access_token = ""
-
-    access_token_secret = ""
-
-    bitly_login = ''
-
-    bitly_apikey = ''
-
-    base_url = '' # Esto es para que solo funcione en el dominio adecuado y no en el sitio de pruebas
-
-    base_url_custom_url = '' # Esto es si tienes un dominio diferente a appspot
-
-    indextank_public_key = ''
-
-    indextank_private_key = ''
-
-    indextank_name_key = ''
-
-    indextank_name_key_prod = ''
+    
+        consumer_key = ""
+    
+        consumer_secret = ""
+    
+        access_token = ""
+    
+        access_token_secret = ""
+    
+        bitly_login = ''
+    
+        bitly_apikey = ''
+    
+        base_url = '' # Esto es para que solo funcione en el dominio adecuado y no en el sitio de pruebas
+    
+        base_url_custom_url = '' # Esto es si tienes un dominio diferente a appspot
+        
+        # Si usas indextank
+    
+        indextank_public_key = ''
+    
+        indextank_private_key = ''
+    
+        indextank_name_key = ''
+    
+        indextank_name_key_prod = ''
 
 
 CSS
