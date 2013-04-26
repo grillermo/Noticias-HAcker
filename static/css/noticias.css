@@ -103,12 +103,14 @@ a:hover {
         font-weight: bold;
         border-radius: 2px;
         margin-left: 20px;
+        display: inline-block;
     }
   #header #menu #main_nav {
     float: left;
     margin-top: 3px;
     margin-left: 20px; 
     color: white;
+    width: 50%;
 }
     #header #menu #main_nav span.sitename {
       padding-right: 5px;
