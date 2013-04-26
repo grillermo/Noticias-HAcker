@@ -98,7 +98,11 @@
 		    .indextank_AjaxSearch({fields:'title,user,url,nhurl,timestamp', start:0, rsLength:20,
 			    listeners: renderer.add(stats_renderer)})
 		    .indextank_InstantSearch();
-      
+            $('#bookmarklet').mouseenter(function(e){
+                $(this).html('Añadir a ▶ News')
+              }).mouseleave(function(){
+                $(this).html('Bookmarklet')
+              })      
     });
     </script>
 
@@ -154,7 +158,7 @@
                   <a href="/directrices">Reglas de uso</a> |
                   <a href="/preguntas-frecuentes">Preguntas frecuentes</a> |
                   <a href="/lideres">Líderes</a> |
-                  <a href="javascript:location.href='http://news.bandtastic.me/agregar.bookmarklet?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)">Bookmarklet</a>
+                  <a id='bookmarklet' href="javascript:location.href='http://news.bandtastic.me/agregar.bookmarklet?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)">Bookmarklet</a>
                   </p>
                   <div class='social'>
                       <script type="text/javascript">// <![CDATA[
