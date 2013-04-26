@@ -16,6 +16,7 @@
     <script type="text/javascript" src="/static/javascript/indextank/jquery.indextank.statsrenderer.js"></script>
     <script type="text/javascript" src="/static/javascript/indextank/jquery.indextank.basic.js"></script>
     <script type="text/javascript" src="/static/javascript/indextank/querybuilder.js"></script>
+    <script type="text/javascript" src="/static/javascript/jquery.event.drag-2.2.js"></script>
 	<link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/south-street/jquery-ui.css" media="all" />
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700' rel='stylesheet' type='text/css'>
     <meta property="fb:admins" content="747729018" />
@@ -102,7 +103,16 @@
                 $(this).html('Añadir a ▶ News')
               }).mouseleave(function(){
                 $(this).html('Bookmarklet')
-              })      
+              }).bind('dragstart',function( event ){
+                $(this).html('Añadir a ▶ News')
+                  })
+              .bind('drag',function( event ){
+                $(this).html('Añadir a ▶ News')
+                  })
+              .bind('dragend',function( event ){
+                $(this).html('Bookmarklet')
+              })
+      
     });
     </script>
 
