@@ -78,19 +78,30 @@ a:hover {
 
 #header {
   background-color: #000;
-  height: 30px;
+  height: 35px;
   line-height: 25px;
-  padding: 1.5em; 
+  padding-top: 1em; 
+  padding-bottom: 2em; 
   color: white;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
-  #header #logo span.logotype {
-    display: blog;
-    width: 23px;
-    height: 23px;
-    float: left; }
+  #header #logo  {
+    float: left;
+    color: white; 
+    width: 105px; 
+    height: 45px; }
+    #header #logo span {
+      padding-right: 5px;
+      text-transform: none;
+      font-weight: bold;
+      font-size: 13px }
+    #header #logo .beta{
+        vertical-align: super;
+        font-size: smaller;
+        text-transform: uppercase;
+      }
   #header #menu a {
     color: #ffb500;
     font-size: 13px;
@@ -112,18 +123,11 @@ a:hover {
     color: white;
     width: 50%;
 }
-    #header #menu #main_nav span.sitename {
-      padding-right: 5px;
-      text-transform: none;
-      font-weight: bold; }
-      #header #menu #main_nav .beta{
-        vertical-align: super;
-        font-size: smaller;
-        text-transform: uppercase;
-      }
   #header #menu #user_toolbar {
     float: right;
-    padding: 0 10px; }
+    padding: 0 10px; 
+    padding-top: 13px;
+  }
     #header #menu #user_toolbar .karma {
       font-size: 12px;
       padding: 0 5px;
