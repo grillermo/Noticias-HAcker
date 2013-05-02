@@ -30,7 +30,7 @@ from django.template.defaultfilters import slugify
 from google.appengine.api import taskqueue
 
 def sanitizeHtml(value):
-  return unicode(escape(value))
+  return unicode(value)
 
 def is_json(value):
   if value.find('.json') >= 0:
