@@ -65,7 +65,7 @@ class Handler(webapp.RequestHandler):
               post = Post(
                   url=url,
                   title=title,
-                  message='bookmarklet',
+                  message='',
                   user=user,
                   nice_url=nice_url
                   )
