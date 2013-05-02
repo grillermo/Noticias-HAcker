@@ -20,9 +20,9 @@
       {% if post.edited %}*{% endif %}
       | 
       {% if not post.nice_url  %}
-        <a href="/noticia/{{post.key}}">{{post.cached_comment_count}} comentarios</a>
+        <a href="/noticia/{{post.key}}#disqus_thread">{{post.cached_comment_count}} comentarios</a>
       {% else %}
-        <a href="/noticia/{{post.nice_url}}">{{post.cached_comment_count}} comentarios</a>	
+        <a href="/noticia/{{post.nice_url}}#disqus_thread">{{post.cached_comment_count}} comentarios</a>	
       {% endif %}
       {% if post.can_edit %}
         | <a href="/editar-noticia/{{post.key}}">editar</a> 
