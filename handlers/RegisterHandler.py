@@ -47,14 +47,28 @@ class Handler(webapp.RequestHandler):
     session = get_current_session()
     nickname = unicode(helper.sanitizeHtml(self.request.get('nickname')))
     password = unicode(helper.sanitizeHtml(self.request.get('password')))
+    email = unicode(helper.sanitizeHtml(self.request.get('email')))
     
     if len(nickname) > 1 and len(password) > 1:
       password = User.slow_hash(password);
       already = User.all().filter("lowercase_nickname =",nickname.lower()).fetch(1)
       if len(already) == 0:
-        user = User(nickname=nickname, lowercase_nickname=nickname.lower(),password=password, about="")
+        if email:
+            user = User(
+                    nickname=nickname,
+                    lowercase_nickname=nickname.lower(),
+                    password=password,
+                    email=email,
+                    about=""
+                    )
+        else:
+            user = User(
+                    nickname=nickname,
+                    lowercase_nickname=nickname.lower(),
+                    password=password,
+                    about=""
+                    )
         user.put()
-        helper.killmetrics("Register",nickname, "do", session, "",self)
         random_id = helper.get_session_id(session) 
         if session.is_active():
           session.terminate()
