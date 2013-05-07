@@ -54,6 +54,7 @@ class Handler(webapp.RequestHandler):
       nextPage = page + 1
 
     session = get_current_session()
+    on_main = True
     
 
     if session.has_key('user'):

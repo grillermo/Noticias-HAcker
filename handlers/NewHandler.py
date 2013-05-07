@@ -51,6 +51,7 @@ class Handler(webapp.RequestHandler):
       prevPage = realPage
     if (page * perPage) < Post.get_cached_count():
       nextPage = page + 1
+    on_new = True
 
     session = get_current_session()
     if session.has_key('user'):

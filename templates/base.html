@@ -143,16 +143,10 @@
                    </a>
                   <div id="menu">
                       <div id="main_nav">
-                          <a href="/nuevo">Lo último</a>
                           <a id='add_new' href="/agregar">Agregar nuevo</a>
                       </div>
                       <div id="user_toolbar">
                           {% if user %}
-                              {% if user.has_notifications %}
-                                  <a href="/inbox"><img src="/static/images/sobre_active.png"/></a>
-                              {% else %}
-                                  <a href="/inbox"><img src="/static/images/sobre.png"/><a>
-                              {% endif %}
                               <a href="/perfil/{{user.nickname}}">{{user.nickname}}</a><span class="karma">({{user.sum_votes}})</span> |
                               <a href="/logout">Log out</a>
                           {% else %}
@@ -170,8 +164,8 @@
           <div id="push" class="cf"></div>
       </div>
           <div id='footer_wrapper'>
-              <div id="footer">
                   <p>
+              <div id="footer">
                   <a href="/rss">RSS</a> |
                   <a href="/directrices">Reglas de uso</a> |
                   <a href="/preguntas-frecuentes">Preguntas frecuentes</a> |

@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 
+          
+<div id='content_menu'>
+    {% if on_main %}
+        <span id='top_news' class='active'>Top</span>
+        <a id='recent_news' class='inactive' href='/nuevo'>Lo último</a>
+        {% else %}
+        <a id='top_news' class='inactive' href='/'>Top</a>
+        <span id='recent_news' class='active'>Lo último</span>
+    {% endif %}
+  <div id='separator'></div>
+</div>
+
 {% for post in posts %}
   {% include "post_bit.html" %}
 {% endfor %}
