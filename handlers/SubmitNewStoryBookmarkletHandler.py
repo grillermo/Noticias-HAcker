@@ -22,6 +22,7 @@ import hashlib
 import prefetch
 import helper
 import random
+import keys
 
 from google.appengine.api import mail
 from google.appengine.api import memcache
@@ -42,6 +43,25 @@ template.register_template_library('filters.CustomFilters')
 
 class Handler(webapp.RequestHandler):
   def get(self):
+    session = get_current_session()
+
+    if session.has_key('user'):
+      user = session['user']
+    else:
+      session['login_error'] = "Inicia sesión para agregar una noticia"
+      self.redirect('/login')
+
+    if session.has_key('post_error'):
+      post_error = session.pop('post_error')
+
+    get_url = self.request.get('url')
+    get_title = helper.sanitizeHtml(self.request.get('title'))
+    nice_url = helper.sluglify(get_title)
+    comment_key = keys.comment_key
+ 
+    self.response.out.write(template.render('templates/submit.html', locals()))
+
+  def post(self):
     session = get_current_session()
     if session.has_key('post_error'):
       post_error = session.pop('post_error')
