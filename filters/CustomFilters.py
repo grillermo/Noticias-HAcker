@@ -30,4 +30,7 @@ def hacetiempo(value):
 
 register.filter(hacetiempo)
 
+def format(format,value):
+    return value%format
 
+register.filter(format)

@@ -9,7 +9,7 @@
           Vas a enviar un enlace. La clave para conseguir votos es contenido interesante y un título descriptivo. <br>
           Agrega noticias, canciones, videos o cualquier contenido musical que creas relevante.
       </p>
-  <form method="POST" class="validable">
+  <form method="POST" action='/agregar' class="validable">
     <fieldset>
       <label>Título</label><input class="textfields requerido" name="title" value="{{ get_title }}"/>
       <input type="hidden" name="comment_key" value="">
