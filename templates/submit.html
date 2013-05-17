@@ -6,8 +6,8 @@
     <div class="error">{{post_error}}</div>
   {% endif %}
       <p>
-          Vas a enviar un enlace. La clave para conseguir votos es contenido interesante y un título descriptivo. <br>
-          Agrega noticias, canciones, videos o cualquier contenido musical que creas relevante.
+          Vas a enviar un enlace. La clave para conseguir votos es contenido interesante y un título descriptivo. </br>
+          Agrega noticias, canciones, videos o cualquier contenido musical que creas relevante.</br>
       </p>
   <form method="POST" action='/agregar' class="validable">
     <fieldset>
@@ -17,6 +17,11 @@
       <input type="submit" value="Agregar"/>
     </fieldset>
   </form>
+
+<p>
+  Si quieres puedes agregar contenido desde tu navegador con este <a id='bookmarklet' href="javascript:location.href='http://news.bandtastic.me/agregar.bookmarklet?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)">Bookmarklet</a>. </br>Solo arrastra hasta tu barra de marcadores y cuando encuentres un sitio interesante compartelo haciendo clic en el marcador.
+</p> 
+
 </div>
 
 <script type="text/javascript">
